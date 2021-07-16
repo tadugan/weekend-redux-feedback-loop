@@ -1,0 +1,62 @@
+TODO:
+
+    [ ] Setup
+        [ ] Create SQL Database
+        [ ] npm install redux react-redux redux-logger
+
+    [ ] React && Client Side
+        [ ] index.js
+            [ ] import redux 
+            [ ] create Reducers
+                [ ] Feelings
+                [ ] understanding
+                [ ] Support 
+                [ ] Comments 
+            [ ] create storeInstance
+                [ ] combineReducers
+                [ ] applyMiddleware
+            [ ] add Provider
+
+        [ ] App.jsx
+            [ ] Router
+                [ ] Import HashRouter
+                [ ] Add Routes
+
+        [ ] Views/Components
+            [ ] "How are you feeling today?"
+                [ ] Numeric rating
+                [ ] Next button
+                [ ] Validate input
+            [ ] "How well are you understanding the content?"
+                [ ] Numeric rating
+                [ ] Next button
+                [ ] Validate input
+            [ ] "How well are you being supported?"
+                [ ] Numeric rating
+                [ ] Next button
+                [ ] Validate input
+            [ ] "How are you feeling today?"
+                [ ] Numeric rating
+                [ ] Next button
+                [ ] Validate input
+            [ ] "Any comments you want to leave?"
+                [ ] Text input
+                [ ] Next button
+            [ ] Review Your Feedback
+                [ ] Display ratings
+                [ ] Submit button 
+                [ ] POST submission to database 
+            [ ] Submission Success Page
+                [ ] Thank You!
+                [ ] Leave New Feedback button
+                    [ ] Reset Survey, return to part 1
+
+    [ ] Server Side 
+        [ ] server.js
+            [ ] Setup express routes 
+        [ ] feedback.router.js 
+            [ ] create router 
+            [ ] setup POST
+            [ ] setup GET
+
+    [ ] Database
