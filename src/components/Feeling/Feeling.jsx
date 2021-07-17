@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Feeling() {
+
+    // declare an instance of useHistory()
+    const history = useHistory();
 
     // declare an instance of useDispatch
     const dispatch = useDispatch();
@@ -17,10 +21,14 @@ function Feeling() {
         console.log('Clicked Feeling submit button'); // test
         console.log('current input value is:', feeling); // test
 
+        // dispatch the input value to the reducer
         dispatch({
             type: 'CHANGE_FEELING',
             payload: feeling
         });
+
+        // send user to the next component
+        history.push('/understanding');
     }
 
     return (

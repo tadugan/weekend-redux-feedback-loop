@@ -8,6 +8,7 @@ TODO:
     [x] Setup
         [x] Create SQL Database
         [x] npm install redux react-redux redux-logger
+        [x] npm install react-router-dom 
 
     [ ] React && Client Side
         [ ] index.js
@@ -29,27 +30,26 @@ TODO:
 
         [ ] Views/Components
             [ ] "How are you feeling today?"
-                [ ] Numeric rating
+                [x] Numeric rating
+                [x] Dispatch input to reducer 
                 [ ] Next button
                 [ ] Validate input
 
             [ ] "How well are you understanding the content?"
-                [ ] Numeric rating
+                [x] Numeric rating
+                [x] Dispatch input to reducer 
                 [ ] Next button
                 [ ] Validate input
 
             [ ] "How well are you being supported?"
-                [ ] Numeric rating
-                [ ] Next button
-                [ ] Validate input
-
-            [ ] "How are you feeling today?"
-                [ ] Numeric rating
+                [x] Numeric rating
+                [x] Dispatch input to reducer 
                 [ ] Next button
                 [ ] Validate input
 
             [ ] "Any comments you want to leave?"
-                [ ] Text input
+                [x] Text input
+                [x] Dispatch input to reducer 
                 [ ] Next button
 
             [ ] Review Your Feedback

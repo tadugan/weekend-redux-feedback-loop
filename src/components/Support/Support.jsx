@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Support() {
+
+    // declare an instance of useHistory()
+    const history = useHistory();
 
     // declare an instance of useDispatch
     const dispatch = useDispatch();
@@ -17,10 +21,14 @@ function Support() {
         console.log('Clicked Support submit button'); // test
         console.log('current input value is:', support); // test
 
+        // dispatch the input value to the reducer
         dispatch({
             type: 'CHANGE_SUPPORT',
             payload: support
         });
+
+        // send user to next component
+        history.push('/comments');
     }
 
     return (

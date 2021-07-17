@@ -7,6 +7,7 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 function App() {
 
@@ -17,10 +18,20 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <main>
-        <Feeling />
-        <Understanding />
-        <Support />
-        <Comments />
+        <Router>
+          <Route exact path="/">
+            <Feeling />
+          </Route>
+          <Route exact path="/understanding">
+            <Understanding />
+          </Route>
+          <Route exact path="/support">
+            <Support />
+          </Route>
+          <Route exact path="/comments">
+            <Comments />
+          </Route>
+        </Router>
       </main>
     </div>
   );
