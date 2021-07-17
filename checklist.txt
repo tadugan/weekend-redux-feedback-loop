@@ -1,8 +1,8 @@
 TODO:
 
-    [ ] Setup
-        [ ] Create SQL Database
-        [ ] npm install redux react-redux redux-logger
+    [x] Setup
+        [x] Create SQL Database
+        [x] npm install redux react-redux redux-logger
 
     [ ] React && Client Side
         [ ] index.js
@@ -27,25 +27,31 @@ TODO:
                 [ ] Numeric rating
                 [ ] Next button
                 [ ] Validate input
+
             [ ] "How well are you understanding the content?"
                 [ ] Numeric rating
                 [ ] Next button
                 [ ] Validate input
+
             [ ] "How well are you being supported?"
                 [ ] Numeric rating
                 [ ] Next button
                 [ ] Validate input
+
             [ ] "How are you feeling today?"
                 [ ] Numeric rating
                 [ ] Next button
                 [ ] Validate input
+
             [ ] "Any comments you want to leave?"
                 [ ] Text input
                 [ ] Next button
+
             [ ] Review Your Feedback
                 [ ] Display ratings
                 [ ] Submit button 
                 [ ] POST submission to database 
+
             [ ] Submission Success Page
                 [ ] Thank You!
                 [ ] Leave New Feedback button
@@ -54,6 +60,7 @@ TODO:
     [ ] Server Side 
         [ ] server.js
             [ ] Setup express routes 
+
         [ ] feedback.router.js 
             [ ] create router 
             [ ] setup POST
