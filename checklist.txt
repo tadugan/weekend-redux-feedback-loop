@@ -6,10 +6,10 @@ TODO:
 
     [ ] React && Client Side
         [ ] index.js
-            [ ] import redux 
+            [x] import redux 
             [ ] create Reducers
                 [ ] Feelings
-                [ ] understanding
+                [ ] Understanding
                 [ ] Support 
                 [ ] Comments 
             [ ] create storeInstance
@@ -67,3 +67,13 @@ TODO:
             [ ] setup GET
 
     [ ] Database
+
+    Data model
+    This is the object we will attempt to POST to the server on the review page.
+
+        data: {
+            feeling: 3,
+            understanding: 3,
+            support: 3,
+            comments: 'string'
+        }
