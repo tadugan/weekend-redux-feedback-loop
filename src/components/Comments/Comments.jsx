@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Comments() {
+
+        // declare an instance of useHistory()
+        const history = useHistory();
 
     // declare an instance of useDispatch
     const dispatch = useDispatch();
@@ -17,10 +21,14 @@ function Comments() {
         console.log('Clicked Comments submit button'); // test
         console.log('current input value is:', comments); // test
 
+        // dispatch input value to reducers
         dispatch({
             type: 'CHANGE_COMMENTS',
             payload: comments
         });
+
+        // send user to review component
+        history.push('/review');
     }
 
     return (
