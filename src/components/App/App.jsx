@@ -2,6 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
+// import components
+import Feeling from '../Feeling/Feeling';
+
 function App() {
 
   return (
@@ -10,6 +13,10 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+      <main>
+        <Feeling />
+        
+      </main>
     </div>
   );
 }

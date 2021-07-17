@@ -1,5 +1,10 @@
 TODO:
 
+    Questions for instructors
+        Q: event.preventDefault seems to override the 'required' property I set for my input.
+        Is there a way to prevent the page from reloading when the submit button is pressed
+        without ignoring my other properties?
+
     [x] Setup
         [x] Create SQL Database
         [x] npm install redux react-redux redux-logger
@@ -8,14 +13,14 @@ TODO:
         [ ] index.js
             [x] import redux 
             [ ] create Reducers
-                [ ] Feelings
+                [x] Feelings
                 [ ] Understanding
                 [ ] Support 
                 [ ] Comments 
-            [ ] create storeInstance
-                [ ] combineReducers
-                [ ] applyMiddleware
-            [ ] add Provider
+            [x] create storeInstance
+                [x] combineReducers
+                [x] applyMiddleware
+            [x] add Provider
 
         [ ] App.jsx
             [ ] Router
@@ -59,11 +64,11 @@ TODO:
 
     [ ] Server Side 
         [ ] server.js
-            [ ] Setup express routes 
+            [x] Setup express route
 
         [ ] feedback.router.js 
-            [ ] create router 
-            [ ] setup POST
+            [x] create router 
+            [x] setup POST
             [ ] setup GET
 
     [ ] Database
