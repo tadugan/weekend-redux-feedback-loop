@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function Support() {
@@ -13,12 +13,39 @@ function Support() {
     // store input value in local state
     const [ support, setSupport ] = useState(0);
 
+    // get state of isEditModeOn reducer and store in a variable
+    const isEditModeOn = useSelector(store => store.isEditModeOn);
+
     // variable to store alert toggle status
     const [ alert, setAlert ] = useState(false);
     
     // handle change of selected radio button
     const handleChange = (event) => {
         setSupport(event.target.value);
+    }
+
+    // function to display different buttons depending on state of isEditModeOn reducer
+    const displayButton = (booleanValue) => {
+        if (booleanValue) {
+            return (
+                <button 
+                type="submit"
+                onClick={handleClick}
+                >
+                    Update
+                </button>
+            );
+        }
+        else {
+            return (
+            <button 
+            type="submit"
+            onClick={handleClick}
+            >
+                Next
+            </button>
+            );
+        }
     }
 
     // handle click of submit button
@@ -42,8 +69,14 @@ function Support() {
             payload: support
         });
 
-        // send user to next component
-        history.push('/comments');
+        // send user to correct component, depending on state of isEditModeOn
+        if (isEditModeOn) {
+            history.push('/review');
+        }
+        else {
+            // send user to the next component
+            history.push('/comments');
+        }
     }
 
     return (
@@ -128,15 +161,10 @@ function Support() {
                     </label>
                 </div>
                 <br />
-                <button 
-                    type="submit"
-                    onClick={handleClick}
-                >
-                    Next
-                </button>
+                {displayButton(isEditModeOn)}
             </form>
             {alert && 
-                <p>*Input must be a number between 1 and 5</p>
+                <p>*Please select a button</p>
             }
         </div>
     );
