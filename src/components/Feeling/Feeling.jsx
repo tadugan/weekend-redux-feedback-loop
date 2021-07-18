@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-import './Feeling.css';
-
 function Feeling() {
 
     // declare an instance of useHistory()

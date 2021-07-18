@@ -2,6 +2,8 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
+import './Review.css';
+
 function Review() {
 
     // gather values from reducers to display on DOM and POST to database
@@ -46,11 +48,11 @@ function Review() {
     return (
         <div>
             <h2>Review Your Feedback</h2>
-            <section>
-                <p>Feelings: {feelingValue}</p>
-                <p>Understanding: {understandingValue}</p>
-                <p>Support: {supportValue}</p>
-                <p>Comments: {commentsValue}</p>
+            <section className="review-score-container">
+                <div className="review-score">Feelings: {feelingValue}</div>
+                <div className="review-score">Understanding: {understandingValue}</div>
+                <div className="review-score">Support: {supportValue}</div>
+                <div className="review-score">Comments: {commentsValue}</div>
             </section>
             <button onClick={handleClick}>
                 Submit Reflection

@@ -10,60 +10,60 @@ TODO:
         [x] npm install redux react-redux redux-logger
         [x] npm install react-router-dom 
 
-    [ ] React && Client Side
-        [ ] index.js
+    [x] React && Client Side
+        [x] index.js
             [x] import redux 
-            [ ] create Reducers
+            [x] create Reducers
                 [x] Feelings
-                [ ] Understanding
-                [ ] Support 
-                [ ] Comments 
+                [x] Understanding
+                [x] Support 
+                [x] Comments 
             [x] create storeInstance
                 [x] combineReducers
                 [x] applyMiddleware
             [x] add Provider
 
-        [ ] App.jsx
-            [ ] Router
-                [ ] Import HashRouter
-                [ ] Add Routes
+        [x] App.jsx
+            [x] Router
+                [x] Import HashRouter
+                [x] Add Routes
 
-        [ ] Views/Components
-            [ ] "How are you feeling today?"
+        [x] Views/Components
+            [x] "How are you feeling today?"
                 [x] Numeric rating
                 [x] Dispatch input to reducer 
-                [ ] Next button
-                [ ] Validate input
+                [x] Next button
+                [x] Validate input
 
-            [ ] "How well are you understanding the content?"
+            [x] "How well are you understanding the content?"
                 [x] Numeric rating
                 [x] Dispatch input to reducer 
-                [ ] Next button
-                [ ] Validate input
+                [x] Next button
+                [x] Validate input
 
-            [ ] "How well are you being supported?"
+            [x] "How well are you being supported?"
                 [x] Numeric rating
                 [x] Dispatch input to reducer 
-                [ ] Next button
-                [ ] Validate input
+                [x] Next button
+                [x] Validate input
 
-            [ ] "Any comments you want to leave?"
+            [x] "Any comments you want to leave?"
                 [x] Text input
                 [x] Dispatch input to reducer 
-                [ ] Next button
+                [x] Next button
 
-            [ ] Review Your Feedback
-                [ ] Display ratings
-                [ ] Submit button 
-                [ ] POST submission to database 
+            [x] Review Your Feedback
+                [x] Display ratings
+                [x] Submit button 
+                [x] POST submission to database 
 
-            [ ] Submission Success Page
-                [ ] Thank You!
-                [ ] Leave New Feedback button
-                    [ ] Reset Survey, return to part 1
+            [x] Submission Success Page
+                [x] Thank You!
+                [x] Leave New Feedback button
+                    [x] Reset Survey, return to part 1
 
-    [ ] Server Side 
-        [ ] server.js
+    [x] Server Side 
+        [x] server.js
             [x] Setup express route
 
         [ ] feedback.router.js 
@@ -71,7 +71,22 @@ TODO:
             [x] setup POST
             [ ] setup GET
 
-    [ ] Database
+    [x] Database
+
+    Stretch Goals && extra features
+        [x] radio buttons
+            [x] Add radio button jsx 
+            [x] capture value of button on click
+
+        [ ] Edit responses at review page
+            [ ] Add edit button to each review item
+            [ ] Create reducer to store editMode toggle
+            [ ] send user back to respective page 
+            [ ] Conditional rendering to switch "next" button to "update"
+                [ ] Update button changes reducer value and sends back to review page
+            [ ] reset editMode toggle on submission 
+
+
 
     Data model
     This is the object we will attempt to POST to the server on the review page.
