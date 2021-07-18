@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
+// material ui imports
+import Button from '@material-ui/core/Button';
+
 function Understanding() {
 
     // declare an instance of useHistory()
@@ -28,22 +31,28 @@ function Understanding() {
     const displayButton = (booleanValue) => {
         if (booleanValue) {
             return (
-                <button 
-                type="submit"
-                onClick={handleClick}
-                >
-                    Update
-                </button>
+                <div className="submit-button-container">
+                    <Button
+                    type="submit"
+                    onClick={handleClick}
+                    variant="contained"
+                    >
+                        Update
+                    </Button>
+                </div>
             );
         }
         else {
             return (
-            <button 
-            type="submit"
-            onClick={handleClick}
-            >
-                Next
-            </button>
+            <div className="submit-button-container">
+                <Button
+                type="submit"
+                onClick={handleClick}
+                variant="contained"
+                >
+                    Next
+                </Button>
+            </div>
             );
         }
     }

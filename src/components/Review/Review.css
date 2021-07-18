@@ -1,6 +1,24 @@
 .review-score-container {
+    width: 375px;
+    text-align: right;
+    margin: auto;
+}
+
+.review-header {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 0 -8px;
 }
 
 .review-score {
     margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.review-edit-button {
+    margin: 0 0 0 16px;
+}
+
+.review-submit-button {
+    margin: 0 8px 0 8px;;
 }
