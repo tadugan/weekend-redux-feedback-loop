@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Review() {
 
@@ -8,6 +9,8 @@ function Review() {
     const understandingValue = useSelector(store => store.understandingReducer);
     const supportValue = useSelector(store => store.supportReducer);
     const commentsValue = useSelector(store => store.commentsReducer);
+
+    const history = useHistory();
 
     // function to POST a new reflection to the database
     const addReflection = () => {
@@ -35,6 +38,9 @@ function Review() {
 
         // add the new reflection to the database
         addReflection();
+
+        // send user to the thank you page
+        history.push('/thank-you');
     }
 
     return (
