@@ -40,7 +40,6 @@ function Comments() {
                     value={comments}
                     onChange={event => setComments(event.target.value)}
                     maxLength="250"
-                    required
                 />
                 <button 
                     type="submit"

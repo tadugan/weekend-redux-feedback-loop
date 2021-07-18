@@ -1,16 +1,40 @@
+import axios from "axios";
 import { useSelector } from "react-redux";
 
 function Review() {
 
-    // gather values from reducers to display on DOM
+    // gather values from reducers to display on DOM and POST to database
     const feelingValue = useSelector(store => store.feelingReducer);
     const understandingValue = useSelector(store => store.understandingReducer);
     const supportValue = useSelector(store => store.supportReducer);
     const commentsValue = useSelector(store => store.commentsReducer);
 
+    // function to POST a new reflection to the database
+    const addReflection = () => {
+        axios({
+            method: 'POST',
+            url: '/reflection',
+            data: {
+                feeling: feelingValue,
+                understanding: understandingValue,
+                support: supportValue,
+                comments: commentsValue
+            }
+        })
+            .then(response => {
+                console.log('New refelction added to database', response)
+            })
+            .catch(error => {
+                console.log('Error adding new reflection to database', error);
+            });
+    }
+
     // handles click to submit reflection and POST reflection to database
     const handleClick = () => {
         console.log('Submit has been clicked'); // test
+
+        // add the new reflection to the database
+        addReflection();
     }
 
     return (
