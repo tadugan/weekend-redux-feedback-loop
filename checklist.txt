@@ -78,13 +78,15 @@ TODO:
             [x] Add radio button jsx 
             [x] capture value of button on click
 
-        [ ] Edit responses at review page
-            [ ] Add edit button to each review item
-            [ ] Create reducer to store editMode toggle
-            [ ] send user back to respective page 
-            [ ] Conditional rendering to switch "next" button to "update"
-                [ ] Update button changes reducer value and sends back to review page
-            [ ] reset editMode toggle on submission 
+        [x] Edit responses at review page
+            [x] Add edit button to each review item
+                [x] update components accordingly
+            [x] Create reducer to store editMode toggle
+            [x] send user back to respective page 
+            [x] Conditional rendering to switch "next" button to "update"
+                [x] Update button changes reducer value and sends back to review page
+            [x] reset editMode toggle on submission 
+            [x] add validation to review page before submission
 
 
 

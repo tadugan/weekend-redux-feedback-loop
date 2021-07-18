@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function Comments() {
@@ -12,7 +12,34 @@ function Comments() {
 
     // store input value in local state
     const [ comments, setComments ] = useState('');
+
+    // get state of isEditModeOn reducer and store in a variable
+    const isEditModeOn = useSelector(store => store.isEditModeOn);    
     
+    // function to display different buttons depending on state of isEditModeOn reducer
+    const displayButton = (booleanValue) => {
+        if (booleanValue) {
+            return (
+                <button 
+                type="submit"
+                onClick={handleClick}
+                >
+                    Update
+                </button>
+            );
+        }
+        else {
+            return (
+            <button 
+            type="submit"
+            onClick={handleClick}
+            >
+                Next
+            </button>
+            );
+        }
+    }
+
     // handle click of submit button
     const handleClick = (event) => {
         // prevents page from reloading when submit is clicked
@@ -28,6 +55,7 @@ function Comments() {
         });
 
         // send user to review component
+        // sends user to review regardless of state of isEditModeOn
         history.push('/review');
     }
 
@@ -42,12 +70,7 @@ function Comments() {
                     maxLength="250"
                 />
                 <br />
-                <button 
-                    type="submit"
-                    onClick={handleClick}
-                >
-                    Next
-                </button>
+                {displayButton(isEditModeOn)}
             </form>  
         </div>
     );

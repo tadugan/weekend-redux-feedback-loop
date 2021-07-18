@@ -39,13 +39,25 @@ const commentsReducer = (state = '', action) => {
     return state;
 }
 
+// Reducer to toggle edit mode for inputs
+const isEditModeOn = (state = false, action) => {
+    if (action.type === 'TURN_EDIT_ON') {
+        return true;
+    }
+    else if (action.type === 'TURN_EDIT_OFF') {
+        return false;
+    }
+    return state;
+}
+
 // storeInstance goes here
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
         supportReducer,
-        commentsReducer
+        commentsReducer,
+        isEditModeOn
     }),
     applyMiddleware(logger)
 )
