@@ -64,14 +64,14 @@ function Review() {
         if (commentsValue.length > 0) {
              return (<p>"{commentsValue}"
                         <button className="review-edit-button" onClick={() => handleEdit('/comments')}>
-                            <EditIcon fontsize="small"/>
+                            <EditIcon fontSize="small"/>
                         </button>
                     </p>)
         }
         else {
             return (<p>Add a Comment 
                         <button className="review-edit-button" onClick={() => handleEdit('/comments')}>
-                            <EditIcon fontsize="small"/>
+                            <EditIcon fontSize="small"/>
                         </button>
                     </p>)
         }
@@ -118,21 +118,21 @@ function Review() {
                 <div className="review-score">
                     <p>Feelings: {feelingValue}   
                         <button className="review-edit-button" onClick={() => handleEdit('/')}>
-                            <EditIcon fontsize="small"/> 
+                            <EditIcon fontSize="small"/> 
                         </button>
                     </p>
                 </div>
                 <div className="review-score">
                     <p>Understanding: {understandingValue} 
                         <button className="review-edit-button" onClick={() => handleEdit('/understanding')}>
-                            <EditIcon fontsize="small"/>
+                            <EditIcon fontSize="small"/>
                         </button>
                     </p>
                 </div>
                 <div className="review-score">
                     <p>Support: {supportValue} 
                         <button className="review-edit-button" onClick={() => handleEdit('/support')}>
-                            <EditIcon fontsize="small"/>
+                            <EditIcon fontSize="small"/>
                         </button>
                     </p>
                 </div>

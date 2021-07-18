@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 
 // material ui imports
 import Button from '@material-ui/core/Button';
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@material-ui/core";
 
 function Understanding() {
 
@@ -90,88 +91,19 @@ function Understanding() {
 
     return (
         <div>
-            <form>
-                <h2>How well are you understanding the content?</h2>
-                <div className="radio-button-container">
-                    <input 
-                        type="radio" 
-                        id="1" 
-                        name="rating" 
-                        value="1" 
-                        onClick={handleChange}
-                    />
-                    <br />
-                    <label htmlFor="1" className="radio-button-label">
-                    1
-                    </label>
-                </div>
-                <div className="radio-button-container">
-                    <input 
-                        type="radio" 
-                        id="2" 
-                        name="rating" 
-                        value="2" 
-                        onClick={handleChange}
-                    />
-                    <br />
-                    <label 
-                        htmlFor="2" 
-                        className="radio-button-label"
-                    >
-                    2
-                    </label>
-                </div>
-                <div className="radio-button-container">
-                    <input 
-                        type="radio" 
-                        id="3" 
-                        name="rating" 
-                        value="3" 
-                        onClick={handleChange}
-                    />
-                    <br />
-                    <label 
-                        htmlFor="3" 
-                        className="radio-button-label"
-                    >
-                    3
-                    </label>
-                </div>
-                <div className="radio-button-container">
-                    <input 
-                        type="radio" 
-                        id="4" 
-                        name="rating" 
-                        value="4" 
-                        onClick={handleChange}
-                    />
-                    <br />
-                    <label 
-                        htmlFor="4" 
-                        className="radio-button-label"
-                    >
-                    4
-                    </label>
-                </div>
-                <div className="radio-button-container">
-                    <input 
-                        type="radio" 
-                        id="5" 
-                        name="rating" 
-                        value="5" 
-                        onClick={handleChange}
-                    />
-                    <br />
-                    <label 
-                        htmlFor="5" 
-                        className="radio-button-label"
-                    >
-                    5
-                    </label>
-                </div>
+            <h2>How well are you understanding the content?</h2>
+            <FormControl component="fieldset">
+                <FormLabel component="legend">Choose One:</FormLabel>
+                    <RadioGroup color="primary" row aria-label="rating" name="rating" value={understanding} onChange={handleChange}>
+                        <FormControlLabel value="1" control={<Radio color="primary" />} label="1"/>
+                        <FormControlLabel value="2" control={<Radio color="primary" />} label="2"/>
+                        <FormControlLabel value="3" control={<Radio color="primary" />} label="3"/>
+                        <FormControlLabel value="4" control={<Radio color="primary" />} label="4"/>
+                        <FormControlLabel value="5" control={<Radio color="primary" />} label="5"/>
+                    </RadioGroup>
                 <br />
                 {displayButton(isEditModeOn)}
-            </form>
+            </FormControl>
             {alert && 
                 <p>*Please select a button</p>
             }
