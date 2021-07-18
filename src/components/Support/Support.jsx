@@ -12,6 +12,9 @@ function Support() {
 
     // store input value in local state
     const [ support, setSupport ] = useState(0);
+
+    // variable to store alert toggle status
+    const [ alert, setAlert ] = useState(false);
     
     // handle click of submit button
     const handleClick = (event) => {
@@ -20,6 +23,13 @@ function Support() {
 
         console.log('Clicked Support submit button'); // test
         console.log('current input value is:', support); // test
+
+        // validate inputs, exit function if input field is invalid
+        if (support < 1 || support > 5) {
+            // set alert to display invalid input message
+            setAlert(true);
+            return;
+        }
 
         // dispatch the input value to the reducer
         dispatch({
@@ -43,13 +53,17 @@ function Support() {
                     onChange={event => setSupport(event.target.value)}
                     required
                 />
+                <br />
                 <button 
                     type="submit"
                     onClick={handleClick}
                 >
                     Next
                 </button>
-            </form>  
+            </form>
+            {alert && 
+                <p>*Input must be a number between 1 and 5</p>
+            }  
         </div>
     );
 }

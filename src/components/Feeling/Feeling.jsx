@@ -13,6 +13,9 @@ function Feeling() {
     // store input value in local state
     const [ feeling, setFeeling ] = useState(0);
     
+    // variable to store alert toggle status
+    const [ alert, setAlert ] = useState(false);
+
     // handle click of submit button
     const handleClick = (event) => {
         // prevents page from reloading when submit is clicked
@@ -20,6 +23,13 @@ function Feeling() {
 
         console.log('Clicked Feeling submit button'); // test
         console.log('current input value is:', feeling); // test
+
+        // validate inputs, exit function if input field is invalid
+        if (feeling < 1 || feeling > 5) {
+            // set alert to display invalid input message
+            setAlert(true);
+            return;
+        }
 
         // dispatch the input value to the reducer
         dispatch({
@@ -43,13 +53,17 @@ function Feeling() {
                     onChange={event => setFeeling(event.target.value)}
                     required
                 />
+                <br />
                 <button 
                     type="submit"
                     onClick={handleClick}
                 >
                     Next
                 </button>
-            </form>  
+            </form>
+            {alert && 
+                <p>*Input must be a number between 1 and 5</p>
+            }
         </div>
     );
 }

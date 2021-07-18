@@ -12,6 +12,9 @@ function Understanding() {
 
     // store input value in local state
     const [ understanding, setUnderstanding ] = useState(0);
+
+    // variable to store alert toggle status
+    const [ alert, setAlert ] = useState(false);
     
     // handle click of submit button
     const handleClick = (event) => {
@@ -20,6 +23,13 @@ function Understanding() {
 
         console.log('Clicked Understanding submit button'); // test
         console.log('current input value is:', understanding); // test
+
+        // validate inputs, exit function if input field is invalid
+        if (understanding < 1 || understanding > 5) {
+            // set alert to display invalid input message
+            setAlert(true);
+            return;
+        }
 
         // dispatch the input value to the reducer
         dispatch({
@@ -43,6 +53,7 @@ function Understanding() {
                     onChange={event => setUnderstanding(event.target.value)}
                     required
                 />
+                <br />
                 <button 
                     type="submit"
                     onClick={handleClick}
@@ -50,6 +61,9 @@ function Understanding() {
                     Next
                 </button>
             </form>  
+            {alert && 
+                <p>*Input must be a number between 1 and 5</p>
+            }
         </div>
     );
 }

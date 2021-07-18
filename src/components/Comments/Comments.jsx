@@ -4,8 +4,8 @@ import { useHistory } from "react-router-dom";
 
 function Comments() {
 
-        // declare an instance of useHistory()
-        const history = useHistory();
+    // declare an instance of useHistory()
+    const history = useHistory();
 
     // declare an instance of useDispatch
     const dispatch = useDispatch();
@@ -41,6 +41,7 @@ function Comments() {
                     onChange={event => setComments(event.target.value)}
                     maxLength="250"
                 />
+                <br />
                 <button 
                     type="submit"
                     onClick={handleClick}
