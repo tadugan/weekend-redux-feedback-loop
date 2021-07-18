@@ -94,12 +94,12 @@ function Feeling() {
             <h2>How are you feeling today?</h2>
             <FormControl component="fieldset">
                 <FormLabel component="legend">Choose One:</FormLabel>
-                    <RadioGroup color="primary" row aria-label="rating" name="rating" value={feeling} onChange={handleChange}>
-                        <FormControlLabel value="1" control={<Radio color="primary" />} label="1"/>
-                        <FormControlLabel value="2" control={<Radio color="primary" />} label="2"/>
-                        <FormControlLabel value="3" control={<Radio color="primary" />} label="3"/>
-                        <FormControlLabel value="4" control={<Radio color="primary" />} label="4"/>
-                        <FormControlLabel value="5" control={<Radio color="primary" />} label="5"/>
+                <RadioGroup className="radio-button-container" color="primary" row aria-label="rating" name="rating" value={feeling} onChange={handleChange}>
+                        <FormControlLabel labelPlacement="bottom" value="1" control={<Radio color="primary" />} label="1"/>
+                        <FormControlLabel labelPlacement="bottom" value="2" control={<Radio color="primary" />} label="2"/>
+                        <FormControlLabel labelPlacement="bottom" value="3" control={<Radio color="primary" />} label="3"/>
+                        <FormControlLabel labelPlacement="bottom" value="4" control={<Radio color="primary" />} label="4"/>
+                        <FormControlLabel labelPlacement="bottom" value="5" control={<Radio color="primary" />} label="5"/>
                     </RadioGroup>
                 <br />
                 {displayButton(isEditModeOn)}
