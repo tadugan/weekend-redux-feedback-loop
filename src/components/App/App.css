@@ -21,3 +21,12 @@
 h4 {
   font-style: italic;
 }
+
+.radio-button-container {
+  display: inline-block;
+  margin: 12px;
+}
+
+.radio-button-label {
+  margin-left: 2px;
+}
