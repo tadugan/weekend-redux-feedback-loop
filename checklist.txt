@@ -94,7 +94,9 @@ TODO:
             [x] style edit buttons
             [x] style next buttons 
             [x] style update buttons 
-            [ ] style leave new feedback
+            [x] style leave new feedback
+            [ ] enhance radio buttons
+            
 
 
 
