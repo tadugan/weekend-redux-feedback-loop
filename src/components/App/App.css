@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif
 }
 
 .App-header {
@@ -29,4 +30,8 @@ h4 {
 
 .radio-button-label {
   margin-left: 2px;
+}
+
+.submit-button-container {
+  margin: 32px 0;
 }

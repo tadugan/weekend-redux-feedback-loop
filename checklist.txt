@@ -88,6 +88,16 @@ TODO:
             [x] reset editMode toggle on submission 
             [x] add validation to review page before submission
 
+        [ ] Material UI styling
+            [x] npm install @material-ui/core 
+            [x] npm install material ui icons
+            [x] style edit buttons
+            [x] style next buttons 
+            [x] style update buttons 
+            [x] style leave new feedback
+            [ ] enhance radio buttons
+            
+
 
 
     Data model

@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
+// material ui imports
+import EditIcon from '@material-ui/icons/Edit';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import Button from '@material-ui/core/Button';
+
+// import css 
 import './Review.css';
 
 function Review() {
@@ -56,10 +62,18 @@ function Review() {
     // display "no comments" if comment string is empty
     const displayComments = (string) => {
         if (commentsValue.length > 0) {
-             return <p>Comments: {commentsValue} <button onClick={() => handleEdit('/comments')}>edit</button></p>
+             return (<p>"{commentsValue}"
+                        <button className="review-edit-button" onClick={() => handleEdit('/comments')}>
+                            <EditIcon fontsize="small"/>
+                        </button>
+                    </p>)
         }
         else {
-            return <p>No comments provided <button onClick={() => handleEdit('/comments')}>edit</button></p>
+            return (<p>Add a Comment 
+                        <button className="review-edit-button" onClick={() => handleEdit('/comments')}>
+                            <EditIcon fontsize="small"/>
+                        </button>
+                    </p>)
         }
     }
 
@@ -99,24 +113,37 @@ function Review() {
 
     return (
         <div>
-            <h2>Review Your Feedback</h2>
             <section className="review-score-container">
+                <h2 className="review-header" >Review Your Feedback</h2>
                 <div className="review-score">
-                    <p>Feelings: {feelingValue} <button onClick={() => handleEdit('/')}>edit</button></p>
+                    <p>Feelings: {feelingValue}   
+                        <button className="review-edit-button" onClick={() => handleEdit('/')}>
+                            <EditIcon fontsize="small"/> 
+                        </button>
+                    </p>
                 </div>
                 <div className="review-score">
-                    <p>Understanding: {understandingValue} <button onClick={() => handleEdit('/understanding')}>edit</button></p>
+                    <p>Understanding: {understandingValue} 
+                        <button className="review-edit-button" onClick={() => handleEdit('/understanding')}>
+                            <EditIcon fontsize="small"/>
+                        </button>
+                    </p>
                 </div>
                 <div className="review-score">
-                    <p>Support: {supportValue} <button onClick={() => handleEdit('/support')}>edit</button></p>
+                    <p>Support: {supportValue} 
+                        <button className="review-edit-button" onClick={() => handleEdit('/support')}>
+                            <EditIcon fontsize="small"/>
+                        </button>
+                    </p>
                 </div>
                 <div className="review-score">
                     {displayComments(commentsValue)}
                 </div>
             </section>
-            <button onClick={handleClick}>
-                Submit Reflection
-            </button>
+                <Button onClick={handleClick} variant="contained" color="primary">
+                    <span className="review-submit-button">Submit</span>
+                    <ArrowUpwardIcon />
+                </Button>
             {alert && 
                 <p>*please edit responses to a value of 1-5</p>}
         </div>
